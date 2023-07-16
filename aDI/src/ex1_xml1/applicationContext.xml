@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+  <!--DI : 빈 정의
+  <bean id ="ko" name="a,b,c" class = "ex1_xml1.MessageBeankoImpl"></bean>
+  <bean id ="ko" class = "ex1_xml1.MessageBeanEnImpl"></bean> -->
+  
+  <!--빈의 생성 범위-->
+  <bean id="ko" name='a,b,c,d' class="ex1_xml1.MessageBeanKoImpl" scope="singleton"></bean>   <!--singleton 제한 적으로 한번만 ko 출력-->
+  <bean id="en" class="ex1_xml1.MessageBeanEnImpl" scope="prototype"></bean>
+  
+  </beans>

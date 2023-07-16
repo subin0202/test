@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:p="http://www.springframework.org/schema/p"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+  <!-- 3. p태그 이용 하여 값 지정 -->
+  <bean id = "bean" class="ex1_xml3_pvalue.MemberBean"
+  p:name="홍성민" p:age="35" p:message="맛점"
+  >
+<!-- <constructor-arg> 1. 생성자로 값을 지정 </constructor-arg>
+ 		<property> 2. setter 값 지정 (get set) </property> -->
+ 
+</bean>
+ 
+  <bean id = "dao1" class="ex1_xml3_pvalue.MemberDao" p:member-ref="bean"></bean>
+
+</beans>
